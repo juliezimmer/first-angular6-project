@@ -13,8 +13,8 @@ import { AppComponent } from './app.component';
    imports: [ 
       BrowserModule, 
       FormsModule
-   ],
+      ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent] // refers to app.component.ts file contents; this tells Angular to bootstrap the entire application with this file/component as the root component.  
 })
 export class AppModule { }
