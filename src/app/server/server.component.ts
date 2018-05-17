@@ -12,8 +12,10 @@ import { Component } from '@angular/core';
    templateUrl: './server.component.html'
 })
 
-
-// export the class so it is accessible in other files in the applicationl
-export class ServerComponment { 
+// export the class so it is accessible in other files in the application. 
+// It will be imported in app.module.ts file. 
+export class ServerComponent { 
 
 }
+
+// this ServerComponent is also registered in app.module.ts in the NgModule Decorator in the 'providers' array as 'ServerComponent'.
