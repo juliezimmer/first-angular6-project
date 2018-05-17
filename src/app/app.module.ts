@@ -7,12 +7,14 @@ import { HttpModule } from '@angular/http';
 
 import { AppComponent } from './app.component';
 import { ServerComponent } from './server/server.component';
+import { ServersComponent } from './servers/servers.component';
 
 // Decorator for the AppModule class. Note that it is imported from the angular core package (on line 2).
 @NgModule({
    declarations: [
       AppComponent,
-      ServerComponent // needs to be imported at the top of the file.
+      ServerComponent,
+      ServersComponent // needs to be imported at the top of the file.
    ],
    imports: [ 
       BrowserModule, 
