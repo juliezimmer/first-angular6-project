@@ -1,18 +1,22 @@
 import { Component, OnInit } from '@angular/core';
 
 @Component({
-   // using a selector that is an attribute
-   // selector: '[app-servers]',
-   // using a selector that is a class
    selector: '.app-servers',
-   template: `
-      <app-server></app-server>
-      <app-server></app-server>`,
+   templateUrl: './servers.component.html', 
    styleUrls: ['./servers.component.css']
 })
 export class ServersComponent implements OnInit {
-
-   constructor() { }
+   // adding new property to the class and related to the 'Add Server' button.
+   // when set to false, the button is not functional and the user won't be able to add a server.  
+   allowNewServer = false;
+   
+   // The constructor is a method that is executed at the time that Angular creates the component.
+   constructor() { 
+      // after 2 seconds, setTimeout un-disables the 'Add Server' button.
+      setTimeout( () => {
+         this.allowNewServer = true;
+      } ,2000);
+   }
 
    ngOnInit() {
   }

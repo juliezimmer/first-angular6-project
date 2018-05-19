@@ -1,2 +1,9 @@
+<!-- Button allows user to add a server 
+     This is done using property binding. 
+     The disabled attribute is being used to disable the button.
+     [disabled]="!allowNewServer" binds the 'Add Server' button to the allowNewServer property in the ServersComponent class.
+-->
+<button class="btn btn-primary" [disabled]="!allowNewServer"> Add Server </button>
+
 <app-server></app-server>
 <app-server></app-server>
