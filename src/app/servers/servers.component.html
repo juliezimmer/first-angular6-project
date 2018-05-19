@@ -26,8 +26,13 @@
 <!-- {{ allowNewServer }} outputs the VALUE of the 'allownewServer' property. 
 [innerText]="allowNewServer" also outputs the value of the property.
 <p [innerText]="allowNewServer"></p>  -->
+<!--<p>{{ serverCreationStatus }}</p>-->
 
-<p>{{ serverCreationStatus }}</p>
+<!-- Add the ngIf directive as an attribute of the p tag -->
+<p *ngIf="serverCreated"> Server was created. Server name is {{ serverName }}</p>
+
+ 
+
 
 <app-server></app-server>
 <app-server></app-server>

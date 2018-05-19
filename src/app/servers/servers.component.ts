@@ -11,7 +11,8 @@ export class ServersComponent implements OnInit {
    allowNewServer = false;
    serverCreationStatus = 'No server was created';
    // serverName starts out as an empty string, but will take in whatever is entered in the input field.
-   serverName = 'Test Server';
+   serverName = '';
+   serverCreated = false; // this variable is also added to the onCreateServer() method
 
 
    // The constructor is a method that is executed at the time that Angular creates the component.
@@ -27,7 +28,9 @@ export class ServersComponent implements OnInit {
 
    // method called from the DOM when 'Add Server' button is clicked. When the method is called, the serverStatusCreation property value is changed to 'Server was created'
    onCreateServer(){
-     this.serverCreationStatus = `Server was created. Its name is ${this.serverName}`;
+      // this variable is initially false, but when the server is added, it changed to 'true'
+      this.serverCreated = true;
+      this.serverCreationStatus = `Server was created. Its name is ${this.serverName}`;
    }
 
    onUpdateServerName(event: any) {
