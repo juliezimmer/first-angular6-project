@@ -1,9 +1,29 @@
+<label>Server Name</label>
+
+<!-- input allows the user to enter a server name -->
+<input 
+   type="text" 
+   class="form-control"
+   (input)="onUpdateServerName($event)">
+
+<!-- Output the serverName using string interpolation -->
+<p> {{ serverName }}</p>
+
 <!-- Button allows user to add a server 
      This is done using property binding. 
      The disabled attribute is being used to disable the button.
      [disabled]="!allowNewServer" binds the 'Add Server' button to the allowNewServer property in the ServersComponent class.
 -->
-<button class="btn btn-primary" [disabled]="!allowNewServer"> Add Server </button>
+<button 
+   class="btn btn-primary" 
+   [disabled]="!allowNewServer" 
+   (click)="onCreateServer()"> Add Server </button>
+
+<!-- {{ allowNewServer }} outputs the VALUE of the 'allownewServer' property -->
+<!-- [innerText]="allowNewServer" also outputs the value of the property
+<p [innerText]="allowNewServer"></p>  -->
+
+<p>{{ serverCreationStatus }}</p>
 
 <app-server></app-server>
 <app-server></app-server>
