@@ -15,6 +15,13 @@ import { Component } from '@angular/core';
 // export the class so it is accessible in other files in the application. 
 // It will be imported in app.module.ts file. 
 export class ServerComponent { 
+   serverId: number = 10;
+   serverStatus: string = 'offLine';
+
+   // serverStatue method
+   getServerStatus() {
+      return this.serverStatus;
+   }
 
 }
 

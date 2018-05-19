@@ -1,0 +1,7 @@
+/* defines the styling for app.component.html */
+
+/* overrides the default styling of the h3 tag */
+h3 {
+   color: blue;
+}
+
