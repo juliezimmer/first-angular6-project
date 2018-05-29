@@ -9,7 +9,12 @@ import { Component } from '@angular/core';
    // the selector should be a string that is prefixed with 'app-   '
    selector: 'app-server',
    // the template file is the path to an external file where this component will be used. This is a path relative to the .ts file. 
-   templateUrl: './server.component.html'
+   templateUrl: './server.component.html',
+   styles: [`
+      .online {
+         color: white;
+      }
+   `]
 })
 
 // export the class so it is accessible in other files in the application. 

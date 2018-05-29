@@ -30,9 +30,5 @@
 
 <!-- Add the ngIf directive as an attribute of the p tag -->
 <p *ngIf="serverCreated"> Server was created. Server name is {{ serverName }}</p>
+<app-server *ngFor="let server of servers"></app-server>
 
- 
-
-
-<app-server></app-server>
-<app-server></app-server>
